@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 from skimage import io, filters, util, morphology, measure
 import numpy
 from scipy import signal
-import math
 
 def gkern(kernlen, nsig):
     # Return 2D Gaussian Kernel
