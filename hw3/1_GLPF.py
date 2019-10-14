@@ -14,25 +14,25 @@ def gkern(kernlen, nsig):
 
 
 # Load image file
-fpath = '/store1/bypark/test_ComVis/3_lpf_hpf/'
+fpath = 'd:/github/ComputerVision/hw3/'
 image = io.imread(fpath + 'character.tif').astype('float64')
 
 # Fourier Transform
-imageFFT = ??
+imageFFT = fftpack.fft2(image)
 imageFFT = fftpack.fftshift(imageFFT)
 
 # Gaussian Filter
 sizeI, sizeJ = image.shape
 d0 = sizeI/40  # cutoff fregquency, equivalent with sigma
 
-GaussianFilter = ?? # kernel
+GaussianFilter = gkern(sizeI, d0) # kernel
 
 # Apply filter
-imageFFTFiltered = ??
+imageFFTFiltered = imageFFT * GaussianFilter
 
 # Inverse Fourier Transform
 imageIFFT = fftpack.ifftshift(imageFFTFiltered)
-imageFiltered = ??
+imageFiltered = fftpack.ifft2(imageIFFT).astype(numpy.float32)
 
 # Plot
 plt.figure(figsize=(10, 10), dpi=150)
