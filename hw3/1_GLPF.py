@@ -12,7 +12,6 @@ def gkern(kernlen, nsig):
 
     return kernel
 
-
 # Load image file
 fpath = 'd:/github/ComputerVision/hw3/'
 image = io.imread(fpath + 'character.tif').astype('float64')
