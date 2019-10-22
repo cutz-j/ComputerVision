@@ -51,5 +51,5 @@ plt.subplot(3, 3, 9)
 plt.imshow(imageFiltered, cmap='gray')
 plt.title('FilteredImage', {'fontsize': 10})
 
-plt.show()
+#plt.show()
 
