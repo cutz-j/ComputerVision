@@ -21,7 +21,6 @@ for i in range(len(lines)):
     for x1,y1,x2,y2 in lines[i]:
         cv2.line(image,(x1,y1),(x2,y2),(0,0,255),3)
         
-
 maxLineGap_b = 20
 lines_b = cv2.HoughLinesP(edges, 1, np.pi/360, 100, minLineLength, maxLineGap_b)
 for i in range(len(lines_b)):
