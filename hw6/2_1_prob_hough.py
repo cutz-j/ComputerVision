@@ -15,7 +15,7 @@ gray = cv2.cvtColor(edges,cv2.COLOR_GRAY2BGR)
 minLineLength = 100
 maxLineGap = 10
 # Perform the probabilistic Hough transform
-#lines = cv2.HoughLinesP(edges, 1, np.pi/180, 100, minLineLength, maxLineGap)
+#lines = cv2.HoughLinesP(edges, 1, np.pi/180, 100, minLineLength, maxLineGap) # error
 lines = cv2.HoughLinesP(edges, 1, np.pi/360, 100, minLineLength, maxLineGap)
 
 for i in range(len(lines)):
